@@ -1,6 +1,42 @@
-$primary-color: white;
-$bg: black;
+* {
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after {
+      box-sizing: border-box;
+  }
+}
+
+html {
+  text-rendering: optimizeLegibility;
+}
+
 h1 {
-  color: $primary-color;
-  background-color: $bg;
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+
+}
+
+button{
+  
 }

@@ -1,0 +1,29 @@
+@mixin title-huge{
+    margin: 0;
+
+    font-weight: $font-weight-bold;
+}
+
+@mixin title-big{
+    margin: 0;
+    
+    font-weight: $font-weight-bold;
+}
+
+@mixin title-medium{
+    margin: 0;
+
+    font-weight: $font-weight-bold;
+}
+
+@mixin title-little{
+    margin: 0;
+
+    font-weight: $font-weight-bold;
+}
+
+@mixin title-miniature{
+    margin: 0;
+
+    font-weight: $font-weight-bold;
+}
