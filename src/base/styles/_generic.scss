@@ -5,36 +5,43 @@
 
   &::before,
   &::after {
-      box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
 html {
+  font-family: 'Roboto', sans-serif;
+  color: $white;
+  font-size: 100%;
   text-rendering: optimizeLegibility;
 }
 
-h1 {
+body {
+  background-color: $black;
+}
 
+h1 {
+  @include title-huge;
 }
 
 h2 {
-
+  @include title-big;
 }
 
 h3 {
-
+  @include title-medium;
 }
 
 h4 {
-
+  @include title-little;
 }
 
 h5 {
-
+  @include title-miniature;
 }
 
 p {
-
+  @include text-regular;
 }
 
 button{

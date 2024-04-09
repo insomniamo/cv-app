@@ -25,3 +25,25 @@ $font-line-height-big: 66.17px;
 $font-line-height-medium: 36px;
 $font-line-height-little: 27px;
 $font-line-height-miniature: 24px;
+
+$font-size-text-big: 18px;
+$font-size-text-regular: 16px;
+
+$font-line-height-text-big: 27px;
+$font-line-height-text-regular: 24px;
+
+// sizes
+$header-height-mobile: 72px;
+$header-height-not-mobile: 88px;
+
+$footer-height-mobile: 672px;
+$footer-height-not-mobile: 422px;
+
+// breakpoints
+$mobile-width: "(min-width: 360px)";
+$tablet-width: "(min-width: 768px)";
+$desktop-width: "(min-width: 1440px)";
+
+// layout
+$container-width: 1296px;
+$gap-container: 72px;
