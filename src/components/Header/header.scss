@@ -1,0 +1,86 @@
+@import "../../base/styles/variables.scss";
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: $header-height-mobile;
+
+    @media #{$tablet-width}{
+        height: $header-height-not-mobile;
+    }
+
+    &__container{
+        height: inherit;
+        max-width: $max-container-width;
+
+        margin-inline: auto;
+        padding-inline: $gap-container-mobile;
+    
+        @media #{$tablet-width}{
+            padding-inline: $gap-container-tablet;
+        }
+    
+        @media #{$desktop-width}{
+            padding-inline: $gap-container-desktop;
+        }
+    }
+
+    &__column{
+        &--logo{
+            height: 24px;
+            width: 78.43px;
+
+            & > .svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: inherit;
+    }
+
+    &__menu{
+        display: none;
+        @media #{$tablet-width}{
+            display: flex;
+            flex-direction: row;
+    
+            margin: 0;
+            padding: 0;
+    
+            list-style: none;
+            
+            :last-child{
+                background-color: $purple-heart;
+            }
+    
+            & > *{
+                font-size: $font-size-text-regular;
+                line-height: $font-line-height-text-regular;
+                padding: 32px 24px 32px 24px;
+            }
+        }
+    }
+
+    &__button{
+        background-color: $black;
+        border: none;
+
+        & > .svg{
+            width: 18px;
+            height: 11px;
+        }
+        
+        @media #{$tablet-width}{
+            display: none;
+        }
+    }
+}

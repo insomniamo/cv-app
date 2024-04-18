@@ -1,18 +1,18 @@
 // colors
 $black: #000000;
 $steel-gray: #181823;
-$regent-gray: #8491A0;
-$shuttle-gray: #5B6876;
-$white: #FFFFFF;
-$purple-heart: #5221E6;
-$emerald: #3CC74E;
-$deep-blush: #E95D90;
-$serenade: #FFF3E4;
-$white-pointer: #FBE4FF;
+$regent-gray: #8491a0;
+$shuttle-gray: #5b6876;
+$white: #ffffff;
+$purple-heart: #5221e6;
+$emerald: #3cc74e;
+$deep-blush: #e95d90;
+$serenade: #fff3e4;
+$white-pointer: #fbe4ff;
 
 //fonts
 $font-weight-bold: 700;
-$font-weiht-regular: 400;
+$font-weight-regular: 400;
 
 $font-size-huge: 78px;
 $font-size-big: 55px;
@@ -40,10 +40,13 @@ $footer-height-mobile: 672px;
 $footer-height-not-mobile: 422px;
 
 // breakpoints
-$mobile-width: "(min-width: 360px)";
+$mobile-width: "(max-width: 767px)";
 $tablet-width: "(min-width: 768px)";
 $desktop-width: "(min-width: 1440px)";
 
 // layout
 $container-width: 1296px;
-$gap-container: 72px;
+$max-container-width: 1440px;
+$gap-container-desktop: 72px;
+$gap-container-tablet: 40px;
+$gap-container-mobile: 20px;
