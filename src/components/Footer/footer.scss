@@ -1,0 +1,10 @@
+@import "@styles/variables.scss";
+
+.footer {
+    height: $footer-height-mobile;
+    background-color: $steel-gray;
+
+    @media #{$tablet-width} {
+        height: $footer-height-not-mobile;
+    }
+}

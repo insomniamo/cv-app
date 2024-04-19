@@ -92,7 +92,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id=\"app\"></div></body></html>',
+      templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1" charset=\"utf-8\"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id=\"app\"></div></body></html>',
       title: 'CV App',
       filename: 'index.html',
     }),
@@ -102,5 +102,12 @@ module.exports = {
       openAnalyzer: false,
     }),
     new CleanWebpackPlugin(),
-  ]
+  ],
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@styles': path.resolve(__dirname, 'src/base/styles'),
+      '@icons': path.resolve(__dirname, 'src/components/Icons'),
+    },
+  },
 };

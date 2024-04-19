@@ -1,7 +1,7 @@
 import "./header.scss";
 import React from "react";
-import HeaderLogo from "./HeaderLogo.jsx";
-import BurgerButton from "./BurgerButton.jsx";
+import Logo from "@icons/Logo.jsx";
+import BurgerButton from "@icons/BurgerButton.jsx";
 
 
 
@@ -11,7 +11,7 @@ export default function Header() {
             <div className="header__container">
                 <div className="header__row">
                     <div className="header__column header__column--logo">
-                        <HeaderLogo />
+                        <Logo />
                     </div>
 
                     <div className="header__column">
