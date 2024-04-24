@@ -1,0 +1,28 @@
+@import "@styles/variables.scss";
+
+.socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    &__item {
+        display: block;
+        height: 24px;
+        width: 24px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 100%;
+        
+        & > svg {
+            height: 90%;
+            width: 90%;
+            
+        }
+    }
+}

@@ -1,16 +1,22 @@
 import React from "react";
 
-import "./Footer.scss";
+import "./footer.scss";
 import Logo from "@icons/Logo.jsx";
-import Vklogo from "@icons/VkLogo.jsx";
-import GitHubLogo from "@icons/GitHubLogo.jsx";
-import TelegramLogo from "@icons/TelegramLogo.jsx";
+import Socials from "@components/Socials/Socials.jsx";
 
 export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer__container">
-
+                <div className="footer__row">
+                    <span>Copyright © 2023 <b>Sergei Demidenko.</b> All rights reserved</span>
+                    <div className="contact__box">
+                        <div className="contact__logo">
+                            <Logo />
+                        </div>
+                        <Socials />
+                    </div>
+                </div>
             </div>
         </footer>
     );
