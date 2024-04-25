@@ -1,8 +1,12 @@
 @import "@styles/variables.scss";
 
 .footer {
-    height: $footer-height-regular;
+    height: $footer-height-mobile;
     background-color: $steel-gray;
+    
+    @media #{$tablet-width}{
+        height: $footer-height-not-mobile;
+    }
 
     &__container{
         height: inherit;
@@ -24,14 +28,37 @@
 
     &__row{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+
+        & > span {
+            color: $regent-gray;
+        }
+
+        :first-child{
+            order: 2;
+        }
+
+
+        @media #{$tablet-width}{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            :first-child{
+                order: -1;
+            }
+        }
     }
 }
 
 .contact {
     &__box {
         width: 130.72px;
+        margin-bottom: 16px;
+
+        @media #{$tablet-width}{
+            margin-bottom: 0;
+        }
     }
 
     &__logo {

@@ -1,11 +1,11 @@
 @import "@styles/variables.scss";
 
 .content {
-    height: calc(100vh - ($header-height-mobile + $footer-height-regular));
+    height: calc(100vh - ($header-height-mobile + $footer-height-mobile));
     margin-top: $header-height-mobile;
 
     @media #{$tablet-width} {
-        height: calc(100vh - ($header-height-not-mobile + $footer-height-regular));
+        height: calc(100vh - ($header-height-not-mobile + $footer-height-not-mobile));
         margin-top: $header-height-not-mobile;
     }
 }
