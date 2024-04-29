@@ -9,7 +9,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer__container">
                 <div className="footer__row">
-                    <span>Copyright © 2024 <b>Sergei Demidenko.</b> All rights reserved</span>
+                    <span>Copyright © 2024 <b>Sergey Demidenko.</b> All rights reserved</span>
                     <div className="contact__box">
                         <div className="contact__logo">
                             <Logo />

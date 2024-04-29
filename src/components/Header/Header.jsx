@@ -16,7 +16,7 @@ export default function Header() {
 
                     <div className="header__column">
                         <ul className="header__menu">
-                            <li>Experirnce</li>
+                            <li>Experience</li>
                             <li>Work</li>
                             <li>Contact</li>
                         </ul>

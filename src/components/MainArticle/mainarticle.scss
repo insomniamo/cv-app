@@ -1,0 +1,104 @@
+@import "@styles/variables.scss";
+
+.mainarticle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media #{$tablet-width}{
+        justify-content: left;
+        flex-direction: row;
+
+        padding-top: 80px;
+        padding-bottom: 84px;
+        padding-inline: 40px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 450px;
+
+        margin-bottom: 48px;
+
+        @media #{$tablet-width}{
+            width: 450px;
+            height: 650px;
+
+            margin-bottom: 0;
+        }
+
+        @media #{$desktop-width}{
+            width: 750px;
+            height: 650px;
+        }
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        padding-inline: 20px;
+
+        @media #{$tablet-width}{
+            max-width: 50%;
+            
+            position: absolute;
+            right: 40px;
+            padding-inline: 0;
+        }
+        @media #{$desktop-width}{
+            max-width: 50%;
+        }
+
+        & > p {
+            font-size: $font-size-little;
+            line-height: $font-line-height-little;
+
+            text-align: justify;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 38.5px;
+
+        margin-bottom: 16px;
+
+        @media #{$tablet-width}{
+            font-size: 56px;
+            line-height: 67.38px;
+
+            margin-bottom: 32px;
+        }
+
+        @media #{$desktop-width}{
+            font-size: 68px;
+            line-height: 93.84px;
+        }
+
+        & > span {
+            color: $regent-gray;
+        }
+    }
+
+    @media #{$desktop-width}{
+        &::before {
+            content: "";
+            display: block;
+            height: 900px;
+            width: 900px;
+            background-color: $steel-gray;
+            position: absolute;
+            top: -$header-height-not-mobile;
+            right: 0;
+            z-index: -1
+        }
+    }
+}

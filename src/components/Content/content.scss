@@ -3,6 +3,9 @@
 .content {
     height: calc(100vh - ($header-height-mobile + $footer-height-mobile));
     margin-top: $header-height-mobile;
+    
+    max-width: $max-container-width;
+    margin-inline: auto;
 
     @media #{$tablet-width} {
         height: calc(100vh - ($header-height-not-mobile + $footer-height-not-mobile));
