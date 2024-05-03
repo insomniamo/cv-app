@@ -1,3 +1,12 @@
+@mixin label-giant{
+    margin: 0;
+
+    font-size: $font-size-giant;
+    line-height: $font-line-height-giant;
+
+    font-weight: $font-weight-regular;
+}
+
 @mixin title-huge{
     margin: 0;
 

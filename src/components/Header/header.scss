@@ -6,6 +6,8 @@
     left: 0;
 
     height: $header-height-mobile;
+    background-color: $black;
+    z-index: 1;
 
     @media #{$tablet-width}{
         height: $header-height-not-mobile;

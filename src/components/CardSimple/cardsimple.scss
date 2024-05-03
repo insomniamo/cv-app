@@ -1,0 +1,27 @@
+@import "@styles/variables.scss";
+
+.card {
+    &__item {
+        flex-grow: 1;
+
+        & > label {
+            color: $regent-gray;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        @media #{$tablet-width} {
+            margin-bottom: 24px;
+        }
+
+        @media #{$desktop-width} {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__description {
+        color: $regent-gray;
+    }
+}

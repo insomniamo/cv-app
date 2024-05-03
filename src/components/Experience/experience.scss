@@ -1,0 +1,39 @@
+@import '@styles/variables.scss';
+
+.experience {
+    
+    &__title {
+        color: $regent-gray;
+        margin-bottom: 8px;
+    }
+
+    &__subtitle {
+        font-size: 32px;
+        line-height: 38.5px;
+        margin-bottom: 40px;
+
+        @media #{$tablet-width} {
+            font-size: $font-size-big;
+            line-height: $font-line-height-big;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        margin-bottom: 48px;
+
+        @media #{$tablet-width} {
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            margin-bottom: 48px;
+        }
+
+        @media #{$tablet-width} {
+            margin-bottom: 120px;
+        }
+    }
+}

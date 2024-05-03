@@ -1,14 +1,29 @@
 @import "@styles/variables.scss";
 
 .content {
-    height: calc(100vh - ($header-height-mobile + $footer-height-mobile));
+    min-height: calc(100vh - ($header-height-mobile + $footer-height-mobile));
     margin-top: $header-height-mobile;
     
     max-width: $max-container-width;
     margin-inline: auto;
 
     @media #{$tablet-width} {
-        height: calc(100vh - ($header-height-not-mobile + $footer-height-not-mobile));
+        min-height: calc(100vh - ($header-height-not-mobile + $footer-height-not-mobile));
         margin-top: $header-height-not-mobile;
+    }
+
+    &__container {
+        padding-inline: $gap-container-mobile;
+        padding-top: 48px;
+
+        @media #{$tablet-width} {
+            padding-inline: $gap-container-tablet;
+            padding-top: 80px;
+        }
+        
+        @media #{$desktop-width} {
+            padding-inline: $gap-container-desktop;
+            padding-top: 120px;
+        }
     }
 }

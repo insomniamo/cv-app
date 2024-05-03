@@ -44,6 +44,10 @@ p {
   @include text-regular;
 }
 
+label{
+  @include label-giant;
+}
+
 button{
   
 }
