@@ -12,14 +12,18 @@ export default function Header() {
                     <div className="header__column header__column--logo">
                         <Logo />
                     </div>
-
                     <div className="header__column">
-                        <ul className="header__menu">
-                            <li className="header__menu-item">Experience</li>
-                            <li className="header__menu-item"><Link to="work" smooth={true} offset={-100} duration={500}>Work</Link></li>
-                            <li className="header__menu-item"><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
-                        </ul>
-                        
+                        <div className="header__menu">
+                            <Link className="header__menu-button" to="experience" smooth={true} duration={500}>
+                                Experience
+                            </Link>
+                            <Link className="header__menu-button" to="work" smooth={true} offset={-100} duration={500}>
+                                Work
+                            </Link>
+                            <Link className="header__menu-button" to="contact" smooth={true} duration={500}>
+                                Contact
+                            </Link>
+                        </div>
                         <button className="header__button">
                             <BurgerButton />
                         </button>

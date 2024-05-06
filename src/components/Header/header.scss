@@ -68,7 +68,18 @@
         }
     }
 
-    &__menu-item{
+    &__menu-button{
+        border: none;
+
+        background-color: $black;
+        color : $white;
+
+        user-select: none;
+        
+        &:active{
+            background-color: $steel-gray;
+        }
+
         &:nth-child(3){
             background-color: $purple-heart;
 
