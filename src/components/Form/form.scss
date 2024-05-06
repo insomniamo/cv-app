@@ -1,0 +1,104 @@
+@import "@styles/variables.scss";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    padding: 48px 20px 48px 20px;
+
+    @media #{$tablet-width} {
+        flex-direction: row;
+
+        padding: 80px 40px 80px 40px;
+    }
+
+    @media #{$desktop-width} {
+        padding: 120px 182px 120px 182px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+
+        @media #{$mobile-width} {
+            font-size: 32px;
+            line-height: 38.5px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__info {
+        width: 100%;
+
+        @media #{$tablet-width} {
+            width: 50%;
+        }
+    }
+
+    &__container-input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media #{$tablet-width} {
+            width: 50%;
+        }
+    }
+
+    &__label {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        background-color: $steel-gray;
+        color: $white;
+
+        margin-bottom: 40px;
+        padding-inline: 10px;
+        height: 50px;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__textarea {
+        background-color: $steel-gray;
+        color: $white;
+
+        margin-bottom: 40px;
+        padding: 10px;
+        min-height: 100px;
+
+        border: none;
+        resize: vertical;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        background-color: $purple-heart;
+        color: $white;
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        border: none;
+
+        &:active {
+            background-color: $electric-violet;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
