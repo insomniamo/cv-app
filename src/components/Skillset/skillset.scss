@@ -1,0 +1,65 @@
+@import "@styles/variables.scss";
+
+.skillset {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @media #{$tablet-width} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media #{$desktop-width} {
+        flex-direction: row;
+        gap: 24px;
+
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__preview {
+        @media #{$desktop-width} {
+            padding-right: 48px;
+
+            flex-grow: 1;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 38.5px;
+
+        margin-bottom: 16px;
+
+        @media #{$tablet-width} {
+            font-size: $font-size-big;
+            line-height: $font-line-height-big;
+
+            margin-bottom: 24px;
+        }
+    }
+
+    &__description {
+        color: $regent-gray;
+        text-align: justify;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 48px;
+
+        @media #{$tablet-width} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        @media #{$desktop-width} {
+            flex-grow: 1;
+        }
+    }
+}

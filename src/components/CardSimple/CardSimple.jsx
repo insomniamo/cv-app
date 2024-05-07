@@ -1,15 +1,16 @@
 import React from "react";
 import "./cardsimple.scss";
 
-export default function CardSimple({ label = "01", imgPath, imgAlt, companyName = "404", cardTitle = ", 404", cardDescription = "404", companyColor = "#3cc74e" }) {
+export default function CardSimple({ label, imgPath, imgAlt, companyName, cardTitle, cardDescription, companyColor }) {
+    const hasImage = imgPath !== undefined && imgPath !== null;
     return (
         <div className="card__item">
             <label>{label}</label>
-            <div className="card__image">
+            <div className={`card__image ${!hasImage ? 'card__image--noimage' : ''}`}>
                 <img src={imgPath} alt={imgAlt} />
             </div>
-            <h3 className="card__title">
-                <span style={{ color: companyColor  }}>{companyName}</span>{cardTitle}
+            <h3 className={`card__title ${hasImage ? 'card__title--imaged' : 'card__title--noimage'}`}>
+                <span style={{ color: companyColor }}>{companyName}</span>{cardTitle}
             </h3>
             <p className="card__description">{cardDescription}</p>
         </div>
