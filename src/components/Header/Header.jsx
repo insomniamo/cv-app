@@ -1,10 +1,31 @@
-import "./header.scss";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import Logo from "@icons/Logo.jsx";
 import BurgerButton from "@icons/BurgerButton.jsx";
+import Menu from "./Menu.jsx";
+import "./header.scss";
 
 export default function Header() {
+    const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+
+    const toggleBurgerMenu = () => {
+        setIsBurgerMenuOpen(!isBurgerMenuOpen);
+    };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsBurgerMenuOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <header className="header">
             <div className="header__container">
@@ -12,23 +33,12 @@ export default function Header() {
                     <div className="header__column header__column--logo">
                         <Logo />
                     </div>
-                    <div className="header__column">
-                        <div className="header__menu">
-                            <Link className="header__menu-button" to="experience" smooth={true} duration={500}>
-                                Experience
-                            </Link>
-                            <Link className="header__menu-button" to="work" smooth={true} offset={-100} duration={500}>
-                                Work
-                            </Link>
-                            <Link className="header__menu-button" to="contact" smooth={true} duration={500}>
-                                Contact
-                            </Link>
-                        </div>
-                        <button className="header__button">
-                            <BurgerButton />
-                        </button>
-                    </div>  
+                    <Menu />
+                    <button className="header__button" onClick={toggleBurgerMenu}>
+                        <BurgerButton />
+                    </button>
                 </div>
+                {isBurgerMenuOpen && <Menu classNames={{ menu__list: "menu__list--mini" }} />}
             </div>
         </header>
     );

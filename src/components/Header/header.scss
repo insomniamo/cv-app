@@ -49,54 +49,7 @@
         height: inherit;
     }
 
-    &__menu{
-        display: none;
-        @media #{$tablet-width}{
-            display: flex;
-            flex-direction: row;
-    
-            margin: 0;
-            padding: 0;
-    
-            list-style: none;
-    
-            & > *{
-                font-size: $font-size-text-regular;
-                line-height: $font-line-height-text-regular;
-                padding: 32px 24px 32px 24px;
-            }
-        }
-    }
 
-    &__menu-button{
-        border: none;
-
-        background-color: $black;
-        color : $white;
-
-        user-select: none;
-        
-        &:active{
-            background-color: $steel-gray;
-        }
-
-        &:nth-child(3){
-            background-color: $purple-heart;
-
-            &:active{
-                background-color: $electric-violet;
-            }
-        }
-
-        &:hover{
-            cursor: pointer;
-        }
-
-        & > a{
-            width: 100%;
-            height: 100%;
-        }
-    }
 
     &__button{
         background-color: $black;
