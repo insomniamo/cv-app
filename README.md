@@ -1,6 +1,6 @@
 # cv
 
-Nothing to see here, yet.
+https://cv-app-insomniamos-projects.vercel.app/
 
 ## Building and running on localhost
 
