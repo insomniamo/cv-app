@@ -15,10 +15,10 @@ export default function Menu({ classNames }) {
                 {lan}
             </div>
             <Link className="menu__button" to="experience" smooth={true} duration={500}>
-                {lan === "EN" ? "Experience" : "Опыт"}
+                {lan === "EN" ? "Experience" : "Скиллы"}
             </Link>
             <Link className="menu__button" to="work" smooth={true} offset={-100} duration={500}>
-                {lan === "EN" ? "Work" : "Работа"}
+                {lan === "EN" ? "Work" : "Опыт работы"}
             </Link>
             <Link className="menu__button" to="contact" smooth={true} duration={500}>
                 {lan === "EN" ? "Contact" : "Связаться"}

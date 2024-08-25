@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import languageReducer from './languageSlice'; // Проверьте путь к файлу
+import languageReducer from './languageSlice';
 
 const store = configureStore({
     reducer: {
-      language: languageReducer, // Название редьюсера должно совпадать с ключом состояния
+      language: languageReducer,
     },
 });
 
