@@ -110,6 +110,7 @@ module.exports = {
       '@icons': path.resolve(__dirname, 'src/components/Icons'),
       '@images': path.resolve(__dirname, 'src/images'),
       '@redux': path.resolve(__dirname, 'src/redux'),
+      '@localization': path.resolve(__dirname, 'src/localization'),
     },
   },
 };

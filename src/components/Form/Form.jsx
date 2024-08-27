@@ -1,27 +1,13 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { useSelector } from 'react-redux';
+import getLocalization from "@localization/localization.js";
 import "./form.scss";
 
 export default function Form() {
     const lan = useSelector(state => state.language.language);
+    const localization = getLocalization('Form', lan);
     const form = useRef();
-
-    const infoEn = {
-        title: "Let’s get started",
-        description: "Now that you know a lot about me, let me know if you are interested to work with me.",
-        name: "Name",
-        email: "Email",
-        message: "Message",
-    }
-    const infoRu = {
-        title: "Давайте начнем!",
-        description: "Теперь, когда вы уже достаточно много обо мне знаете, дайте мне знать, если Вы хотите со мной работать.",
-        name: "Имя",
-        email: "Email",
-        message: "Сообщение",
-    }
-    const info = lan === 'EN' ? infoEn : infoRu;
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -54,35 +40,35 @@ export default function Form() {
         <div className="form">
             <div className="form__info">
                 <h2 className="form__title">
-                    {info.title}
+                    {localization.title}
                 </h2>
                 <p className="form__description">
-                    {info.description}
+                    {localization.description}
                 </p>
             </div>
 
             <form className="form__container-input" ref={form} onSubmit={sendEmail}>
-                <label className="form__label">{info.name}</label>
+                <label className="form__label">{localization.name}</label>
                 <input
                     className="form__input"
                     type="text"
                     name="user_name"
                     required
                 />
-                <label className="form__label">{info.email}</label>
+                <label className="form__label">{localization.email}</label>
                 <input
                     className="form__input"
                     type="email"
                     name="user_email"
                     required
                 />
-                <label className="form__label">{info.message}</label>
+                <label className="form__label">{localization.message}</label>
                 <textarea
                     className="form__textarea"
                     name="message"
                     required
                 />
-                <input className="form__button" type="submit" value={info.title}/>
+                <input className="form__button" type="submit" value={localization.title}/>
             </form>
         </div>
     );
